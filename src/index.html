@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>nameErrorMatch</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <h1 id="greeting"></h1>
+  <header id="header">
+    <!-- Buttons -->
+    <button class="button leader-board-button" id="leader-board-button"></button>
+    <button class="button" id="starter"></button>
+    <span class="hidden" id="counter"></span>
+    <button class="button sign-up-button" id="sign-up"></button>
+  </header>
+  <div id="main">
+    <!-- LeaderBoard Modal content -->
+    <div id="leaderBoardModal" class="leader-board">
+      <div class="leader-board-content">
+        <span><h2>LEADERS</h2></span>
+        <ol id="leaderBoardOl"></ol>
+        <span id ="leader-board-span" class="big-close">&times;</span>
+      </div>
+    </div>
+    <div id="signUpModal" class="modal">
+      <!-- Sign Up Modal content -->
+      <div class="modal-content">
+        <form class="sign-up-form">Sign In/Up to Play Game
+          <br>          
+          <input required id="up" type="text" placeholder="Username"></input>
+          <input type="submit">
+        </form>
+        <span id="sign-up-span" class="close">&times;</span>
+      </div>
+    </div>
+      <!-- Modal content -->
+      <div id="congratsModal" class="modal congrats">
+        <div id="congrats-content" class="congrats-content">
+        </div>
+      </div>
+    <div id="board">
+    </div>
+  </div>
+  <!-- <footer>nameErrorMatch</footer> -->
+  <script type="text/javascript" src="board.js"></script>
+  <script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>

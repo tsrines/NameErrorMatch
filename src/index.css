@@ -1,0 +1,233 @@
+header {
+  margin-top: 2rem;
+  width: 100%;
+  height: 4%;
+  display: flex;
+  justify-content: space-around;
+}
+/* footer {
+  color: orange;
+  width: 100%;
+  text-justify: center;
+  display: inline-flex;
+  justify-content: center;
+} */
+body {
+  background-color: ivory;
+  height: 95vh;
+  /* height: 100px; */
+  /* height: 100%; */
+  width: 100%;
+  /* width: 100vw; */
+  display: flex;
+  flex-direction: column;
+  /* padding: 0; */
+  align-items: center;
+  justify-content: center;
+  overflow-y: scroll;
+}
+
+#main {
+  height: inherit;
+  width: inherit;
+  /* height: 90%; */
+  display: flex;
+  /* display: 90%; */
+  align-items: center;
+  justify-content: center;
+}
+
+#board {
+  pointer-events: none;
+  width: 50%;
+  height: 70%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  position: fixed;
+  margin-bottom: -10px;
+  align-items: center;
+  justify-content: center;
+  column-gap: 15px;
+  row-gap: 15px;
+}
+
+.tile {
+  width: 100px;
+  height: 120px;
+  margin: 0px 0;
+  perspective: 600px;
+}
+
+.card {
+  height: 120px;
+  background-position: center;
+  background-size: cover;
+  width: 100px;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  border: 3px solid turquoise;
+}
+
+.card.is-flipped {
+  transform: rotateY(180deg);
+}
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* line-height: flex; */
+  color: black;
+  text-align: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 20px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.card__face--back {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 16px;
+}
+.card__face--front {
+
+  transform: rotateY(180deg);
+  align-items: center;
+  text-align: center;
+  font-size: small;
+}
+
+h1{
+  display: block;
+  font-size: 3em;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  color: orange
+}
+
+.card.matched {
+  /* transition-delay: 0.5s; */
+  pointer-events: none;
+  cursor: not-allowed;
+  border-width: 5px;
+}
+
+.hidden {
+  display: none!important;
+}
+
+#starter {
+  pointer-events: none;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  color: yellow;
+  background-color: teal;
+}
+
+.leader-board{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  width: 80%;
+  height: 80%;
+}
+.leader-board-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: orange;
+  margin: auto;
+  border: 1px solid #888;
+  width: 75%;
+  height: 100%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; 
+  z-index: 1;
+  width: 80%;
+  height: 15%;
+}
+/* Modal Content */
+.modal-content {
+  display: flex;
+  background-color: orange;
+  margin: auto;
+  border: 1px solid #888;
+  width: 75%;
+  height: 75%;
+  align-items: center;
+  justify-content: center;
+}
+
+.congrats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  width: 80%;
+  height: 80%;
+}
+
+.congrats-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: orange;
+  margin: auto;
+  border: 1px solid #888;
+  width: 75%;
+  height: 100%;
+}
+
+/* The Close Button */
+.close {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.big-close{
+  font-size: 28px;
+  font-weight: bold;
+  color: black;
+  /* border: 3px solid black; */
+  text-justify: right;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+#counter {
+  background-color: ivory;
+  color: black;
+  display: table;
+  font-size: 32px;
+}
+.image {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
